@@ -1,0 +1,50 @@
+.button_focus_fixed {
+    position:absolute;
+    bottom:-20%;
+    animation-name: ring;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 1000px;
+    z-index: 6;
+    width: 100%;
+  }
+
+  .button_focus {
+    width: 100%;
+    height: 50%;
+    background: rgb(102, 136, 172);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 0px 0px 20px rgb(102, 136, 172);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    opacity: 0.9;
+
+    a {
+      letter-spacing: 1.3px;
+      text-decoration: none;
+      font-family: "Bahnschrift", sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+
+  .button_focus:hover {
+    opacity: 1;
+    background-color: #80a4f6;
+  }
+
+@keyframes ring {
+  0% {
+    box-shadow: 0px 0px 20px rgb(122, 153, 220);
+  }
+  100% {
+    box-shadow: 0px 0px 50px #7f91dd;
+  }
+}

@@ -1,0 +1,23 @@
+.swiper-slide {
+  height: 100%;
+  width: 100%;
+}
+.swiper-wrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 1;
+ 
+}
+
+.swiper {
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  position: relative;
+  overflow: hidden;
+  overflow: clip;
+  list-style: none;
+  padding: 0;
+  z-index: 1;
+  display: block;
+  height: 100%;}

@@ -1,0 +1,1452 @@
+.home {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  padding-bottom: 30px;
+  background-color: white;
+  font-family: "Nunito", sans-serif;
+  .video {
+    width: 100%;
+    height: 45vh;
+    margin-bottom: 30px;
+  }
+  .cards {
+    background-color: white;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 5vh;
+    padding-bottom: 1vh;
+    .card {
+      width: 20%;
+      height: 100%;
+    }
+  }
+  .news {
+    height: 70vh;
+    width: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+    padding-top: 3vh;
+    padding-bottom: 5vh;
+    h1 {
+      font-size: 32px;
+      color: rgb(102, 136, 172);
+    }
+    .newsCard {
+      margin-top: 3vh;
+      width: 30%; // Ширина каждой карточки
+      display: inline-block;
+      margin-right: 3.3%;
+      vertical-align: top;
+      box-sizing: border-box;
+      background-color: #fff;
+    }
+    .arrow_button {
+      border: none;
+      margin-top: 2vh;
+      display: flex;
+      color: white;
+      background-color: rgb(102, 136, 172);
+      padding: 10px 16px;
+      transition: all 0.3s ease;
+      font-weight: bold;
+      border-radius: 16px;
+      cursor: pointer;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .arrow_button > .arrow {
+      width: 6px;
+      height: 6px;
+      border-right: 2px solid rgb(255, 255, 255);
+      border-bottom: 2px solid rgb(255, 255, 255);
+      position: relative;
+      transform: rotate(-45deg);
+      margin: 0 6px;
+      transition: all 0.3s ease;
+    }
+
+    .arrow_button > .arrow::before {
+      display: block;
+
+      width: 3px;
+      transform-origin: bottom right;
+      height: 2px;
+      position: absolute;
+      opacity: 0;
+      bottom: calc(-2px / 2);
+      transform: rotate(45deg);
+      transition: all 0.3s ease;
+      content: "";
+      right: 0;
+    }
+
+    .arrow_button:hover > .arrow {
+      transform: rotate(-45deg) translate(4px, 4px);
+      border-color: text-hover-color;
+    }
+
+    .arrow_button:hover > .arrow::before {
+      opacity: 1;
+      width: 8px;
+    }
+
+    .arrow_button:hover {
+      background-color: none;
+      color: white;
+    }
+  }
+
+  .swiper_block {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    padding-left: 20%;
+    padding-right: 20%;
+
+    padding-bottom: 10vh;
+    margin-bottom: 5vh;
+    justify-content: space-between;
+    .left_side {
+      z-index: 1;
+      width: 65%;
+      height: 35vh;
+    }
+    .right_side {
+      display: flex;
+      flex-direction: column;
+      gap: 2%;
+      border-radius: 10px;
+      padding: 2.7%;
+      width: 30%;
+      height: 37.1vh;
+      background-color: rgb(129, 174, 223);
+      ul {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .cooperation {
+    width: 100%;
+    height: 60vh;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h1 {
+      color: black;
+    }
+    .links {
+      margin-top: 3vh;
+      width: 100%;
+      height: 40%;
+
+      border-radius: 16px;
+      display: flex;
+      flex-direction: row;
+      gap: 4vw;
+
+      .link_box {
+        transition: all 0.3s ease-in-out 0s;
+        cursor: pointer;
+        border-radius: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 17%;
+        align-items: center;
+        gap: 3vh;
+        text-align: center;
+        img {
+          width: 70%;
+          height: 60%;
+        }
+        p {
+          font-size: 16px;
+          color: black;
+          font-weight: 600;
+        }
+        &:hover {
+          box-shadow: 0px 0px 20px rgb(102, 136, 172);
+          border: 1px solid #b2c7f6;
+        }
+      }
+    }
+  }
+
+  .button_focus_fixed {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    animation-name: ring;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 1000px;
+    z-index: 3;
+    width: 250px;
+  }
+
+  .button_focus {
+    width: 250px;
+    height: 60px;
+    background: rgb(102, 136, 172);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 0px 0px 20px rgb(102, 136, 172);
+    transition: all 0.3s ease-in-out 0s;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    padding: 10px;
+    opacity: 0.9;
+
+    a {
+      letter-spacing: 1.3px;
+      text-decoration: none;
+      font-family: "Bahnschrift", sans-serif;
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: #fff;
+    }
+  }
+
+  .button_focus:hover {
+    opacity: 1;
+    background-color: rgb(129, 181, 237);
+  }
+}
+@keyframes ring {
+  0% {
+    box-shadow: 0px 0px 20px rgb(120, 134, 210) 96;
+  }
+  100% {
+    box-shadow: 0px 0px 50px #728ac3;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .home {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    background-color: white;
+    font-family: "Nunito", sans-serif;
+    .video {
+      width: 100%;
+      height: 35vh;
+      margin-bottom: 30px;
+    }
+    .cards {
+      background-color: white;
+      width: 100%;
+      height: 70vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 5vh;
+      padding-bottom: 1vh;
+      .card {
+        width: 16vw;
+        height: 90%;
+      }
+    }
+    .news {
+      height: 70vh;
+      width: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 5vh;
+      padding-bottom: 5vh;
+      margin-bottom: 6vh;
+      h1 {
+        font-size: 2.4rem;
+        color: rgb(102, 136, 172);
+      }
+      .newsCard {
+        margin-top: 3vh;
+        width: 30%; // Ширина каждой карточки
+        display: inline-block;
+        margin-right: 3.3%;
+        vertical-align: top;
+        box-sizing: border-box;
+        background-color: #fff;
+      }
+      .arrow_button {
+        border: none;
+        margin-top: 2vh;
+        display: flex;
+        color: white;
+        background-color: rgb(102, 136, 172);
+        padding: 10px 16px;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        border-radius: 16px;
+        cursor: pointer;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .arrow_button > .arrow {
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid rgb(255, 255, 255);
+        border-bottom: 2px solid rgb(255, 255, 255);
+        position: relative;
+        transform: rotate(-45deg);
+        margin: 0 6px;
+        transition: all 0.3s ease;
+      }
+
+      .arrow_button > .arrow::before {
+        display: block;
+
+        width: 3px;
+        transform-origin: bottom right;
+        height: 2px;
+        position: absolute;
+        opacity: 0;
+        bottom: calc(-2px / 2);
+        transform: rotate(45deg);
+        transition: all 0.3s ease;
+        content: "";
+        right: 0;
+      }
+
+      .arrow_button:hover > .arrow {
+        transform: rotate(-45deg) translate(4px, 4px);
+        border-color: text-hover-color;
+      }
+
+      .arrow_button:hover > .arrow::before {
+        opacity: 1;
+        width: 8px;
+      }
+
+      .arrow_button:hover {
+        background-color: none;
+        color: white;
+      }
+    }
+
+    .swiper_block {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-bottom: 2vh;
+      padding-top: 5vh;
+      justify-content: space-between;
+      .left_side {
+        z-index: 1;
+        width: 60%;
+        height: 35vh;
+      }
+      .right_side {
+        display: flex;
+        flex-direction: column;
+        gap: 2%;
+        border-radius: 10px;
+        padding: 2.7%;
+        width: 37%;
+        height: 37.1vh;
+        background-color: rgb(129, 174, 223);
+        ul {
+          font-size: 1.12rem;
+        }
+      }
+    }
+    .cooperation {
+      width: 100%;
+      height: 60vh;
+      padding-left: 5%;
+      padding-right: 5%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      h1 {
+        color: black;
+      }
+      .links {
+        margin-top: 3vh;
+        width: 100%;
+        height: 60%;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 4vw;
+
+        .link_box {
+          transition: all 0.3s ease-in-out 0s;
+          cursor: pointer;
+          border-radius: 14px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 18%;
+          align-items: center;
+          gap: 3vh;
+          img {
+            width: 70%;
+            height: 55%;
+          }
+          p {
+            font-size: 18px;
+            color: black;
+            font-weight: 800;
+          }
+          &:hover {
+            box-shadow: 0px 0px 20px rgb(102, 136, 172);
+            border: 1px solid #b2c7f6;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .home {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    background-color: white;
+    font-family: "Nunito", sans-serif;
+    .video {
+      width: 100%;
+      height: 50vh;
+      margin-bottom: 30px;
+    }
+    .cards {
+      background-color: white;
+      width: 100%;
+      height: 70vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 5vh;
+      padding-bottom: 1vh;
+      .card {
+        width: 16vw;
+        height: 90%;
+      }
+    }
+    .news {
+      height: 70vh;
+      width: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 5vh;
+      padding-bottom: 5vh;
+      margin-bottom: 6vh;
+      h1 {
+        font-size: 32px;
+        color: rgb(102, 136, 172);
+      }
+      .newsCard {
+        margin-top: 3vh;
+        width: 30%; // Ширина каждой карточки
+        display: inline-block;
+        margin-right: 3.3%;
+        vertical-align: top;
+        box-sizing: border-box;
+        background-color: #fff;
+      }
+      .arrow_button {
+        border: none;
+        margin-top: 2vh;
+        display: flex;
+        color: white;
+        background-color: rgb(102, 136, 172);
+        padding: 10px 16px;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        border-radius: 16px;
+        cursor: pointer;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .arrow_button > .arrow {
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid rgb(255, 255, 255);
+        border-bottom: 2px solid rgb(255, 255, 255);
+        position: relative;
+        transform: rotate(-45deg);
+        margin: 0 6px;
+        transition: all 0.3s ease;
+      }
+
+      .arrow_button > .arrow::before {
+        display: block;
+
+        width: 3px;
+        transform-origin: bottom right;
+        height: 2px;
+        position: absolute;
+        opacity: 0;
+        bottom: calc(-2px / 2);
+        transform: rotate(45deg);
+        transition: all 0.3s ease;
+        content: "";
+        right: 0;
+      }
+
+      .arrow_button:hover > .arrow {
+        transform: rotate(-45deg) translate(4px, 4px);
+        border-color: text-hover-color;
+      }
+
+      .arrow_button:hover > .arrow::before {
+        opacity: 1;
+        width: 8px;
+      }
+
+      .arrow_button:hover {
+        background-color: none;
+        color: white;
+      }
+    }
+
+    .swiper_block {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-bottom: 2vh;
+      padding-top: 5vh;
+      justify-content: space-between;
+      .left_side {
+        z-index: 1;
+        width: 60%;
+        height: 35vh;
+      }
+      .right_side {
+        display: flex;
+        flex-direction: column;
+        gap: 2%;
+        border-radius: 10px;
+        padding: 2.7%;
+        width: 37%;
+        height: 37.1vh;
+        background-color: rgb(129, 174, 223);
+        ul {
+          font-size: 15px;
+        }
+      }
+    }
+    .cooperation {
+      width: 100%;
+      height: 60vh;
+      padding-left: 5%;
+      padding-right: 5%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      h1 {
+        color: black;
+        font-weight: 800;
+      }
+      .links {
+        margin-top: 3vh;
+        width: 100%;
+        height: 60%;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 4vw;
+
+        .link_box {
+          transition: all 0.3s ease-in-out 0s;
+          cursor: pointer;
+          border-radius: 14px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 18%;
+          align-items: center;
+          gap: 3vh;
+          img {
+            width: 7.6rem;
+            height: 10rem;
+          }
+          p {
+            font-size: 18px;
+            color: black;
+            font-weight: 800;
+          }
+          &:hover {
+            box-shadow: 0px 0px 20px rgb(102, 136, 172);
+            border: 1px solid #b2c7f6;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .home {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    background-color: white;
+    font-family: "Nunito", sans-serif;
+    .video {
+      width: 100%;
+      height: 35vh;
+      margin-bottom: 30px;
+    }
+    .cards {
+      background-color: white;
+      width: 100%;
+      height: 70vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 5vh;
+      padding-bottom: 1vh;
+      .card {
+        width: 16vw;
+        height: 90%;
+      }
+    }
+    .news {
+      height: 70vh;
+      width: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 5vh;
+      padding-bottom: 5vh;
+      margin-bottom: 6vh;
+      h1 {
+        font-size: 32px;
+        color: rgb(102, 136, 172);
+      }
+      .newsCard {
+        margin-top: 3vh;
+        width: 30%; // Ширина каждой карточки
+        display: inline-block;
+        margin-right: 3.3%;
+        vertical-align: top;
+        box-sizing: border-box;
+        background-color: #fff;
+      }
+      .arrow_button {
+        border: none;
+        margin-top: 2vh;
+        display: flex;
+        color: white;
+        background-color: rgb(102, 136, 172);
+        padding: 10px 16px;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        border-radius: 16px;
+        cursor: pointer;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .arrow_button > .arrow {
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid rgb(255, 255, 255);
+        border-bottom: 2px solid rgb(255, 255, 255);
+        position: relative;
+        transform: rotate(-45deg);
+        margin: 0 6px;
+        transition: all 0.3s ease;
+      }
+
+      .arrow_button > .arrow::before {
+        display: block;
+
+        width: 3px;
+        transform-origin: bottom right;
+        height: 2px;
+        position: absolute;
+        opacity: 0;
+        bottom: calc(-2px / 2);
+        transform: rotate(45deg);
+        transition: all 0.3s ease;
+        content: "";
+        right: 0;
+      }
+
+      .arrow_button:hover > .arrow {
+        transform: rotate(-45deg) translate(4px, 4px);
+        border-color: text-hover-color;
+      }
+
+      .arrow_button:hover > .arrow::before {
+        opacity: 1;
+        width: 8px;
+      }
+
+      .arrow_button:hover {
+        background-color: none;
+        color: white;
+      }
+    }
+
+    .swiper_block {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-bottom: 2vh;
+      padding-top: 5vh;
+      justify-content: space-between;
+      .left_side {
+        z-index: 1;
+        width: 60%;
+        height: 35vh;
+      }
+      .right_side {
+        display: flex;
+        flex-direction: column;
+        gap: 2%;
+        border-radius: 10px;
+        padding: 2.7%;
+        width: 37%;
+        height: 37.1vh;
+        background-color: rgb(129, 174, 223);
+        ul {
+          font-size: 15px;
+        }
+      }
+    }
+    .cooperation {
+      width: 100%;
+      height: 60vh;
+      padding-left: 5%;
+      padding-right: 5%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      h1 {
+        color: black;
+        font-weight: 800;
+      }
+      .links {
+        margin-top: 3vh;
+        width: 100%;
+        height: 60%;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 4vw;
+
+        .link_box {
+          transition: all 0.3s ease-in-out 0s;
+          cursor: pointer;
+          border-radius: 14px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 18%;
+          align-items: center;
+          gap: 3vh;
+          img {
+            width: 7.6rem;
+            height: 10rem;
+          }
+          p {
+            font-size: 18px;
+            color: black;
+            font-weight: 800;
+          }
+          &:hover {
+            box-shadow: 0px 0px 20px rgb(102, 136, 172);
+            border: 1px solid #b2c7f6;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1028px) {
+  .home {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    background-color: white;
+    font-family: "Nunito", sans-serif;
+    .video {
+      width: 100%;
+      height: 35vh;
+      margin-bottom: 30px;
+    }
+    .cards {
+      background-color: white;
+      width: 100%;
+      height: 70vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 5vh;
+      padding-bottom: 1vh;
+      flex-wrap: wrap;
+      .card {
+        width: 22%;
+        height: 100%;
+      }
+    }
+    .news {
+      height: 70vh;
+      width: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 5vh;
+      padding-bottom: 5vh;
+
+      h1 {
+        font-size: 32px;
+        color: rgb(102, 136, 172);
+      }
+      .newsCard {
+        margin-top: 3vh;
+        width: 30%; // Ширина каждой карточки
+        display: inline-block;
+        margin-right: 3.3%;
+        vertical-align: top;
+        box-sizing: border-box;
+        background-color: #fff;
+      }
+      .arrow_button {
+        border: none;
+        margin-top: 2vh;
+        display: flex;
+        color: white;
+        background-color: rgb(102, 136, 172);
+        padding: 10px 16px;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        border-radius: 16px;
+        cursor: pointer;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .arrow_button > .arrow {
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid rgb(255, 255, 255);
+        border-bottom: 2px solid rgb(255, 255, 255);
+        position: relative;
+        transform: rotate(-45deg);
+        margin: 0 6px;
+        transition: all 0.3s ease;
+      }
+
+      .arrow_button > .arrow::before {
+        display: block;
+
+        width: 3px;
+        transform-origin: bottom right;
+        height: 2px;
+        position: absolute;
+        opacity: 0;
+        bottom: calc(-2px / 2);
+        transform: rotate(45deg);
+        transition: all 0.3s ease;
+        content: "";
+        right: 0;
+      }
+
+      .arrow_button:hover > .arrow {
+        transform: rotate(-45deg) translate(4px, 4px);
+        border-color: text-hover-color;
+      }
+
+      .arrow_button:hover > .arrow::before {
+        opacity: 1;
+        width: 8px;
+      }
+
+      .arrow_button:hover {
+        background-color: none;
+        color: white;
+      }
+    }
+
+    .swiper_block {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-bottom: 10vh;
+      padding-top: 5vh;
+      justify-content: space-between;
+      .left_side {
+        z-index: 1;
+        width: 65%;
+        height: 35vh;
+      }
+      .right_side {
+        display: flex;
+        flex-direction: column;
+        gap: 2%;
+        border-radius: 10px;
+        padding: 2.7%;
+        width: 35%;
+        height: 37.1vh;
+        background-color: rgb(129, 174, 223);
+        ul {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .home {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    background-color: white;
+    font-family: "Nunito", sans-serif;
+    .video {
+      width: 100%;
+      height: 35vh;
+      margin-bottom: 30px;
+    }
+    .cards {
+      background-color: white;
+      width: 100%;
+      height: 70vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 5vh;
+      padding-bottom: 1vh;
+      margin-bottom: 18vh;
+      .card {
+        width: 26%;
+        height: 70%;
+      }
+    }
+    .news {
+      height: 70vh;
+      width: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 5vh h1 {
+        font-size: 32px;
+        color: rgb(102, 136, 172);
+      }
+      .newsCard {
+        margin-top: 3vh;
+        width: 30%; // Ширина каждой карточки
+        display: inline-block;
+        margin-right: 3.3%;
+        vertical-align: top;
+        box-sizing: border-box;
+        background-color: #fff;
+      }
+      .arrow_button {
+        border: none;
+        margin-top: 2vh;
+        display: flex;
+        color: white;
+        background-color: rgb(102, 136, 172);
+        padding: 10px 16px;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        border-radius: 16px;
+        cursor: pointer;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .arrow_button > .arrow {
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid rgb(255, 255, 255);
+        border-bottom: 2px solid rgb(255, 255, 255);
+        position: relative;
+        transform: rotate(-45deg);
+        margin: 0 6px;
+        transition: all 0.3s ease;
+      }
+
+      .arrow_button > .arrow::before {
+        display: block;
+
+        width: 3px;
+        transform-origin: bottom right;
+        height: 2px;
+        position: absolute;
+        opacity: 0;
+        bottom: calc(-2px / 2);
+        transform: rotate(45deg);
+        transition: all 0.3s ease;
+        content: "";
+        right: 0;
+      }
+
+      .arrow_button:hover > .arrow {
+        transform: rotate(-45deg) translate(4px, 4px);
+        border-color: text-hover-color;
+      }
+
+      .arrow_button:hover > .arrow::before {
+        opacity: 1;
+        width: 8px;
+      }
+
+      .arrow_button:hover {
+        background-color: none;
+        color: white;
+      }
+    }
+
+    .swiper_block {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+
+      padding-bottom: 10vh;
+      margin-bottom: 5vh;
+      justify-content: space-between;
+      .left_side {
+        z-index: 1;
+        width: 60%;
+        height: 35vh;
+      }
+      .right_side {
+        display: flex;
+        flex-direction: column;
+        gap: 2%;
+        border-radius: 10px;
+        padding: 3.7%;
+        width: 40%;
+        height: 37.1vh;
+        background-color: rgb(129, 174, 223);
+        ul {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .cooperation {
+      width: 100%;
+      height: 60vh;
+      padding-left: 5%;
+      padding-right: 5%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      h1 {
+        color: black;
+      }
+      .links {
+        margin-top: 3vh;
+        width: 100%;
+        height: 40%;
+        border-radius: 16px;
+        display: flex;
+        flex-direction: row;
+        gap: 4vw;
+
+        .link_box {
+          transition: all 0.3s ease-in-out 0s;
+          cursor: pointer;
+          border-radius: 14px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 18%;
+          align-items: center;
+          gap: 3vh;
+          img {
+            width: 85%;
+            height: 60%;
+          }
+          p {
+            font-size: 16px;
+            color: black;
+            font-weight: 700;
+          }
+          &:hover {
+            box-shadow: 0px 0px 20px rgb(102, 136, 172);
+            border: 1px solid #b2c7f6;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    background-color: white;
+    font-family: "Nunito", sans-serif;
+    .video {
+      width: 100%;
+      height: 35vh;
+      margin-bottom: 30px;
+    }
+    // .cards {
+    //   background-color: white;
+    //   width: 100%;
+    //   height: 70vh;
+    //   display: flex;
+    //   flex-direction: row;
+    //   justify-content: space-between;
+
+    //   padding-left: 5%;
+    //   padding-right: 5%;
+    //   padding-top: 5vh;
+    //   padding-bottom: 1vh;
+    //   .card {
+    //     width: 16vw;
+    //     height: 90%;
+    //   }
+    // }
+    .news {
+      height: 70vh;
+      width: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 5vh;
+      padding-bottom: 5vh;
+      h1 {
+        font-size: 32px;
+        color: rgb(102, 136, 172);
+      }
+      .newsCard {
+        margin-top: 3vh;
+        width: 30%; // Ширина каждой карточки
+        display: inline-block;
+        margin-right: 3.3%;
+        vertical-align: top;
+        box-sizing: border-box;
+        background-color: #fff;
+      }
+      .arrow_button {
+        border: none;
+        margin-top: 2vh;
+        display: flex;
+        color: white;
+        background-color: rgb(102, 136, 172);
+        padding: 10px 16px;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        border-radius: 16px;
+        cursor: pointer;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .arrow_button > .arrow {
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid rgb(255, 255, 255);
+        border-bottom: 2px solid rgb(255, 255, 255);
+        position: relative;
+        transform: rotate(-45deg);
+        margin: 0 6px;
+        transition: all 0.3s ease;
+      }
+
+      .arrow_button > .arrow::before {
+        display: block;
+
+        width: 3px;
+        transform-origin: bottom right;
+        height: 2px;
+        position: absolute;
+        opacity: 0;
+        bottom: calc(-2px / 2);
+        transform: rotate(45deg);
+        transition: all 0.3s ease;
+        content: "";
+        right: 0;
+      }
+
+      .arrow_button:hover > .arrow {
+        transform: rotate(-45deg) translate(4px, 4px);
+        border-color: text-hover-color;
+      }
+
+      .arrow_button:hover > .arrow::before {
+        opacity: 1;
+        width: 8px;
+      }
+
+      .arrow_button:hover {
+        background-color: none;
+        color: white;
+      }
+    }
+
+    .swiper_block {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+
+      padding-bottom: 10vh;
+      margin-bottom: 5vh;
+      justify-content: space-between;
+      .left_side {
+        z-index: 1;
+        width: 60%;
+        height: 35vh;
+      }
+      .right_side {
+        display: flex;
+        flex-direction: column;
+        gap: 2%;
+        border-radius: 10px;
+        padding: 2.7%;
+        width: 37%;
+        height: 37.1vh;
+        background-color: rgb(129, 174, 223);
+        ul {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    padding-bottom: 30px;
+    background-color: white;
+    font-family: "Nunito", sans-serif;
+    .video {
+      width: 100%;
+      height: 35vh;
+      margin-bottom: 30px;
+    }
+    .cards {
+      background-color: white;
+      width: 100%;
+      height: 70vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 5vh;
+      padding-bottom: 1vh;
+      .card {
+        width: 29%;
+      }
+    }
+    .news {
+      height: 50vh;
+      width: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+      padding-top: 5vh;
+      padding-bottom: 5vh;
+      h1 {
+        font-size: 32px;
+        color: rgb(102, 136, 172);
+      }
+      .newsCard {
+        margin-top: 3vh;
+        width: 30%; // Ширина каждой карточки
+        display: inline-block;
+        margin-right: 3.3%;
+        vertical-align: top;
+        box-sizing: border-box;
+        background-color: #fff;
+      }
+      .arrow_button {
+        border: none;
+        margin-top: 2vh;
+        display: flex;
+        color: white;
+        background-color: rgb(102, 136, 172);
+        padding: 10px 16px;
+        transition: all 0.3s ease;
+        font-weight: bold;
+        border-radius: 16px;
+        cursor: pointer;
+        align-items: center;
+        font-size: 14px;
+      }
+
+      .arrow_button > .arrow {
+        width: 6px;
+        height: 6px;
+        border-right: 2px solid rgb(255, 255, 255);
+        border-bottom: 2px solid rgb(255, 255, 255);
+        position: relative;
+        transform: rotate(-45deg);
+        margin: 0 6px;
+        transition: all 0.3s ease;
+      }
+
+      .arrow_button > .arrow::before {
+        display: block;
+
+        width: 3px;
+        transform-origin: bottom right;
+        height: 2px;
+        position: absolute;
+        opacity: 0;
+        bottom: calc(-2px / 2);
+        transform: rotate(45deg);
+        transition: all 0.3s ease;
+        content: "";
+        right: 0;
+      }
+
+      .arrow_button:hover > .arrow {
+        transform: rotate(-45deg) translate(4px, 4px);
+        border-color: text-hover-color;
+      }
+
+      .arrow_button:hover > .arrow::before {
+        opacity: 1;
+        width: 8px;
+      }
+
+      .arrow_button:hover {
+        background-color: none;
+        color: white;
+      }
+    }
+
+    .swiper_block {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      height: 100%;
+      padding-left: 5%;
+      padding-right: 5%;
+
+      padding-bottom: 10vh;
+      margin-bottom: 5vh;
+      justify-content: space-between;
+      .left_side {
+        z-index: 1;
+        width: 60%;
+        height: 35vh;
+      }
+      .right_side {
+        display: flex;
+        flex-direction: column;
+        gap: 2%;
+        border-radius: 10px;
+        padding: 2.7%;
+        width: 37%;
+        height: 37.1vh;
+        background-color: rgb(129, 174, 223);
+        h1 {
+          font-size: 22px;
+        }
+        ul {
+          list-style-type: none;
+          font-size: 10px;
+        }
+      }
+    }
+    .cooperation {
+      width: 100%;
+      height: 60vh;
+      padding-left: 5%;
+      padding-right: 5%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      h1 {
+        color: black;
+      }
+      .links {
+        margin-top: 3vh;
+        width: 100%;
+        height: 40%;
+
+        border-radius: 16px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .link_box {
+          transition: all 0.3s ease-in-out 0s;
+          cursor: pointer;
+          border-radius: 14px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          width: 12vw;
+          align-items: center;
+          gap: 1.5vh;
+          text-align: center;
+          img {
+            width: 100%;
+            height: 45%;
+          }
+          p {
+            font-size: 15px;
+            color: black;
+            font-weight: 700;
+          }
+          &:hover {
+            box-shadow: 0px 0px 20px rgb(102, 136, 172);
+            border: 1px solid #b2c7f6;
+          }
+        }
+      }
+    }
+  }
+}

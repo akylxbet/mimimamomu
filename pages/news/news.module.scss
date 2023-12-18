@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+.newsContainer {
+  display: flex;
+  height: 100vh; // Занимаем всю высоту экрана
+  padding-left: 12% ;
+  padding-right: 12%;
+  font-family: "Nunito", sans-serif;
+  .sidebar {
+    margin-top: 4%;
+    width: 24%; // Ширина панели слева
+    padding-right: 2%;
+    padding-left: 2%;
+    background-color: #ececec; // Цвет фона панели
+    border-radius: 12px;
+    h2 {
+      margin-bottom: 20px;
+    }
+  }
+
+  .mainContent {
+    flex: 1; // Занимаем всю оставшуюся ширину экрана
+    padding: 20px;
+
+    .main_card {
+      display: flex;
+      flex-direction: column;
+
+      .main_big_card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        overflow: hidden;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        background-color: #f0f0f0;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+        .image_container {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          overflow: hidden;
+
+          .image_overlay {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(
+              0,
+              0,
+              0,
+              0.5
+            ); // Черный полупрозрачный оверлей
+            transition: 0.5s;
+          }
+
+          .image_overlay:hover {
+            opacity: 1;
+          }
+
+          .news_image {
+            width: 100%;
+            height: 100%;
+            object-fit:contain;
+          }
+        }
+
+        .description {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          padding: 10px;
+          color: #fff;
+          background-color: rgba(0, 0, 0, 0.7);
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          width: 100%;
+          .date {
+            font-size: 14px;
+            line-height: 16px;
+          }
+
+          .title {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 16px;
+          }
+
+          .arrow {
+            font-size: 16px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+              transform: translateX(5px);
+            }
+          }
+        }
+      }
+    }
+
+    .other_cards {
+      width: 100%;
+      max-width: 100%;
+      height: 100%;
+      .other_news {
+        display: flex;
+        flex-wrap: wrap;
+        
+
+        .other_news_card {
+          width: 33%; // 30% ширины родителя
+          background-color: #f0f0f0;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+          display: flex;
+          flex-direction: row;
+          .image_container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+
+            .image_overlay {
+              opacity: 0;
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-color: rgba(
+                0,
+                0,
+                0,
+                0.5
+              ); // Черный полупрозрачный оверлей
+              transition: 0.5s;
+            }
+
+            .image_overlay:hover {
+              opacity: 1;
+            }
+
+            .news_image {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .description {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            padding: 4px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            z-index: 1; // Добавьте z-index
+            width: 100%;
+          
+            .date {
+              font-size:10px;
+              line-height: 12px;
+            }
+          
+            .title {
+              font-size: 10px;
+              font-weight: bold;
+              line-height: 12px;
+            }
+          
+            .arrow {
+              font-size: 14px;
+              transition: transform 0.3s ease;
+          
+              &:hover {
+                transform: translateX(5px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
