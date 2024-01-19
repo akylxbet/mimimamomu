@@ -100,6 +100,10 @@ const Header = () => {
           <Link href="/news">Новости</Link>
         </div>
         <div className={s.header_link_middle}>
+
+
+
+          
           <Link href="/aboutus">О нас</Link>
           <Link href="">Вакансии</Link>
           <Link href="">Контакты</Link>

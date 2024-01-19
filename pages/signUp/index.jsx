@@ -1,12 +1,11 @@
+"use client"
 import React from "react";
-import SInpUt from "@/components/UI/input/input";
+import Image from "next/image";
 import { LockOutlined, UserOutlined, MailOutlined } from "@ant-design/icons";
 import { Input } from "antd";
 import s from "./signUp.module.scss";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import vodo_logo from '../../public/Vodo_Logo.png'
+import vodo_logo from "../../public/Vodo_Logo.png";
 const signUp = () => {
   return (
     <div className={s.signup}>

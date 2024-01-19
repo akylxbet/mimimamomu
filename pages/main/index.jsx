@@ -7,7 +7,11 @@ import Intro from "@/components/Intro/Intro";
 import NewsCard from "@/components/UI/NewsCard/NewsCard";
 import Swipert from "@/components/UI/swiper/swipert";
 import CardService from "@/components/Card/Card";
+
 const Home = () => {
+
+ 
+
   const newsArray = [
     {
       id: 1,
