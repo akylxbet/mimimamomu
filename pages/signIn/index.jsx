@@ -1,5 +1,5 @@
 import React from "react";
-import SInpUt from "@/components/UI/input/input";
+import SInpUt from "@/components/UI/inputUi/inputUi";
 import { LockOutlined, UserOutlined, MailOutlined } from "@ant-design/icons";
 import { Input } from "antd";
 import s from "./signIn.module.scss";
